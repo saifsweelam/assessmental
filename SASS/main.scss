@@ -89,6 +89,12 @@ body {
                 }
             }
 
+            @media screen and (min-width: 600px) {
+                div:last-of-type {
+                    display: none;
+                }
+            }
+            
 
             .current {
                 background-color: darken($color: $color3, $amount: 7%);

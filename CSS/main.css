@@ -81,6 +81,9 @@ body {
           body header nav div:last-of-type {
             width: 20%;
             display: block; } }
+      @media screen and (min-width: 600px) {
+        body header nav div:last-of-type {
+          display: none; } }
       body header nav .current {
         background-color: #fae2af; }
       body header nav .menu-item {
