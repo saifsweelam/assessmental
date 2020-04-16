@@ -14,7 +14,18 @@
 </head>
 
 <body>
-    <header>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : 'your-app-id',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v6.0'
+          });
+        };
+      </script>
+      <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <header id="page-header">
         <section>
             <h1>AssessMental</h1>
             <p>An interesting way to self-learn</p>
@@ -48,10 +59,38 @@
         </nav>
     </header>
     <main>
-        <section></section>
+        <section class="content">
+            <header>
+                <h2>Welcome <span id="name"></span>!</h2>
+                <div class="data">
+                    <div>
+                        <h5>Quizzes Completed</h5>
+                        <p id="num-of-quizzes">0</p>
+                    </div>
+                    <div>
+                        <h5>Score</h5>
+                        <p id="score">0</p>
+                    </div>
+                    <div>
+                        <h5>Level</h5>
+                        <p id="level">LOW</p>
+                    </div>
+                </div>
+                <footer>
+                    <div>Share your score with your friends</div>
+                    <div class="social-btns">
+                        <div><i class="fab fa-facebook" style="color: #3b5999;"></i></div>
+                        <div><i class="fab fa-twitter" style="color: #55acee;"></i></div>
+                        <div><i class="fab fa-whatsapp" style="color: #25D366;"></i></div>
+                    </div>
+                </footer>
+            </header>
+            <section></section>
+        </section>
         <aside></aside>
     </main>
     <footer></footer>
+    <script src="JS/scores.js"></script>
 </body>
 
 </html>

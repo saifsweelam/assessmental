@@ -1,5 +1,6 @@
-@import 'palette.scss';
-@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Cairo|Lobster&display=swap');
+
+$font: 'Cairo', sans-serif;
+
 
 @mixin gradient-text($colors...) {
     background: -webkit-linear-gradient($colors);
@@ -9,8 +10,13 @@
     -webkit-text-fill-color: transparent;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Cairo|Lobster&display=swap');
+@import 'palette.scss';
+@import 'header.scss';
 
-$font: 'Cairo', sans-serif;
+
+
+
 
 :root {
     @media screen and (min-width: 1000px) {font-size: 18px;}
@@ -28,106 +34,66 @@ body {
     background-color: $color3;
     color: $color2;
     min-height: 100vh;
-    header {
-        @media screen and (min-width: 1000px) {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        min-height: 20vh;
-        background-color: $color4;
-        padding-bottom: 1em;
-        section {
-            @media screen and (max-width:1000px) {
-                width:100%;
+    main {
+        section.content {
+            padding: 2em;
+            header {
+                background-color: white;
+                border-radius: 24px;
+                padding: 1em;
 
-            }
-            @media screen and (min-width: 1000px) {
-                width: 30%;
-            }
-            font-family: Lobster, $font;
-            color: $color3;
+                div.data {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
 
-            h1 {
-                font-size: 3.5rem;
-                @include gradient-text(45deg,
-                $color3 66.666%, 
-                #E16541 16.666%, 
-                $color3 23.333%, 
-                #F18F43 83.333%);
-            }
-        }
+                    div {
+                        width: 20%;
+                        margin-top: 2em;
 
-        nav {
-            margin: 0 auto;
-            background-color: $color3;
-            border-radius: 100px;
-            width: fit-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            -webkit-box-shadow: 2px 7px 32px -11px rgba(0,0,0,0.75);
-            -moz-box-shadow: 2px 7px 32px -11px rgba(0,0,0,0.75);
-            box-shadow: 2px 7px 32px -11px rgba(0,0,0,0.75);
+                        p {
+                            font-size: 2rem;
+                        }
+                    }
 
-
-            @media screen and (max-width: 600px) {
-                width: 100%;
-                justify-content: space-between;
-
-                div {
-                    display: none;
-                }
-                div:nth-of-type(1) {
-                    display: block;
-                    width: 80%;
-                    order: 1;
-                }
-                div:last-of-type {
-                    width: 20%;
-                    display: block;
-                }
-            }
-
-            @media screen and (min-width: 600px) {
-                div:last-of-type {
-                    display: none;
-                }
-            }
-            
-
-            .current {
-                background-color: darken($color: $color3, $amount: 7%);
-            }
-
-            .menu-item {
-                color: $color4;
-
-                a {
-                    color: $color4;
-                }
-
-                padding: 0.5em;
-                border-radius: 100px;
-
-                &:hover {
-                    background-color: darken($color: $color3, $amount: 7%);
-                }
-            }
-
-            .dropdown {
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: #f1f1f1;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-                }
-
-                &:hover {
-                    .dropdown-content {
+                    @media screen and (max-width: 700px) {
                         display: block;
+
+                        div {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                footer {
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 1.12rem;
+
+                    div.social-btns {
+                        width: 100px;
+                        justify-content: space-around;
+                        display: flex;
+
+                        & > div {
+                            cursor: pointer;
+                        }
+                    }
+
+                    @media screen and (max-width: 700px) {
+                        display: block;
+
+                        div.social-btns {
+                            margin: 0 auto;
+                            font-size: 1.5rem;
+                            width: 200px;
+                            
+                            @media screen and (max-width: 500px) {
+                                width: 100%;
+                                font-size: 2rem;
+                            }
+                        }
+
                     }
                 }
             }

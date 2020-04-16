@@ -2,7 +2,7 @@
 
 /* RGB */
 $color1: #7d3cff;
-$color2: #161748;
 $color3: #fceed1;
 $color4: #c80e13;
-$color5: #f2d53c;
+$color2: darken($color4, 20%);
+$color5: darken($color: $color3, $amount: 7%);
