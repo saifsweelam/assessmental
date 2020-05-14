@@ -1,39 +1,11 @@
-
-$font: 'Cairo', sans-serif;
-
-
-@mixin gradient-text($colors...) {
-    background: -webkit-linear-gradient($colors);
-    background: linear-gradient($colors);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Cairo|Lobster&display=swap');
 @import 'palette.scss';
+@import 'basic.scss';
 @import 'header.scss';
 
 
 
 
-
-:root {
-    @media screen and (min-width: 1000px) {font-size: 18px;}
-    @media screen and (min-width: 700px) and (max-width: 1000px) {font-size: 16px;}
-    @media screen and (min-width: 400px) and (max-width: 700px) {font-size: 15px;}
-    @media screen and (min-width: 250px) and (max-width: 400px) {font-size: 14px;}
-    @media screen and (min-width: 150px) and (max-width: 250px) {font-size: 13px;}
-    @media screen and (max-width: 150px) {font-size: 11px;}
-}
-
 body {
-    text-align: center;
-    font-family: $font;
-    margin: 0;
-    background-color: $color3;
-    color: $color2;
-    min-height: 100vh;
     main {
         section.content {
             padding: 2em;
@@ -77,6 +49,11 @@ body {
 
                         & > div {
                             cursor: pointer;
+                            transition: all 0.7s;
+
+                            &:hover {
+                                transform: scale(1.07);
+                            }
                         }
                     }
 

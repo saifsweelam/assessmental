@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="CSS/main.css" rel="stylesheet">
+    <link href="../CSS/quiz.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/586ec15b1c.js" crossorigin="anonymous"></script>
 
 </head>
@@ -20,9 +20,9 @@
             <p>An interesting way to self-learn</p>
         </section>
         <nav>
-            <div class="menu-item current" onclick="window.location.href=this.querySelector('a').href;"><a
-                    href="index.html"><i class="fas fa-home"></i> Home</a></div>
-            <div class="dropdown menu-item">
+            <div class="menu-item" onclick="window.location.href=this.querySelector('a').href;"><a
+                    href="../index.html"><i class="fas fa-home"></i> Home</a></div>
+            <div class="dropdown menu-item current">
                 <div class="dropbtn"><i class="far fa-file-alt"></i> Quizzes</div>
                 <div class="dropdown-content" id="quizzes-menu-items">
                     <a href="#"><i class="fas fa-square-root-alt"></i> Maths</a><br>
@@ -53,7 +53,22 @@
         </nav>
     </header>
     <main>
-        <section class="content">
+        <section>
+            <header class="quiz">
+                <h2 id="quiz-title"></h2>
+                <article id="quiz-info">
+                    <div id="quiz-categories"></div>
+                    <div>Submissions: <span id="quiz-submissions"></span></div>
+                </article>
+                <article id="quiz-content">
+                    <img id="quiz-thumbnail">
+                    <div id="button-area">
+                        <button id="start-quiz">Start Quiz</button>
+                    </div>
+                </article>
+            </header>
+        </section>
+        <aside>
             <header>
                 <h2>Welcome <span id="name"></span>!</h2>
                 <div class="data">
@@ -79,13 +94,12 @@
                     </div>
                 </footer>
             </header>
-            <section></section>
-        </section>
-        <aside></aside>
+        </aside>
     </main>
     <footer></footer>
-    <script src="JS/scores.js"></script>
-    <script src="JS/quiz_db.js"></script>
+    <script src="../JS/quiz_db.js"></script>
+    <script src="../JS/quiz_page.js"></script>
+    <script src="../JS/scores.js"></script>
 </body>
 
 </html>

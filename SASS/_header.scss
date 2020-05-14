@@ -1,6 +1,6 @@
 body {
     header#page-header {
-        @media screen and (min-width: 1000px) {
+        @media screen and (min-width: 1100px) {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -9,15 +9,16 @@ body {
         background-color: $color4;
         padding-bottom: 1em;
         section {
-            @media screen and (max-width:1000px) {
+            @media screen and (max-width:1100px) {
                 width:100%;
 
             }
-            @media screen and (min-width: 1000px) {
+            @media screen and (min-width: 1100px) {
                 width: 30%;
             }
             font-family: Lobster, $font;
             color: $color3;
+            transition: all 0.4s;
 
             h1 {
                 font-size: 3.5rem;
@@ -77,13 +78,19 @@ body {
 
                 a {
                     color: $color4;
+                    
+                    &:hover {
+                        text-decoration: none;
+                    }
                 }
 
                 padding: 0.5em;
                 border-radius: 100px;
+                transition: all 0.4s;
 
                 &:hover {
                     background-color: $color5;
+                    cursor: pointer;
                 }
             }
 
@@ -100,6 +107,7 @@ body {
                     a {
                         display: block;
                         padding: 0.5em;
+                        transition: all 0.4s;
 
                         &:hover {
                             background-color: $color5;

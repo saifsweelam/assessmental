@@ -4,5 +4,6 @@
 $color1: #7d3cff;
 $color3: #fceed1;
 $color4: #c80e13;
+$color6: lighten($color4, 20%);
 $color2: darken($color4, 20%);
 $color5: darken($color: $color3, $amount: 7%);

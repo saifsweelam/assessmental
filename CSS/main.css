@@ -1,22 +1,59 @@
-@import url("https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Cairo|Lobster&display=swap");
 /* Coolors Exported Palette - coolors.co/26547c-ef476f-ffd166-06d6a0-fffcf9 */
 /* RGB */
+@import url("https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Cairo|Lobster&display=swap");
+@media screen and (min-width: 1000px) {
+  :root {
+    font-size: 18px; } }
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  :root {
+    font-size: 16px; } }
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  :root {
+    font-size: 15px; } }
+
+@media screen and (min-width: 250px) and (max-width: 400px) {
+  :root {
+    font-size: 14px; } }
+
+@media screen and (min-width: 150px) and (max-width: 250px) {
+  :root {
+    font-size: 13px; } }
+
+@media screen and (max-width: 150px) {
+  :root {
+    font-size: 11px; } }
+
+body {
+  visibility: hidden;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  background-color: #fceed1;
+  color: #69070a;
+  min-height: 100vh; }
+
+input, textarea, button {
+  color: #69070a; }
+
 body header#page-header {
   min-height: 20vh;
   background-color: #c80e13;
   padding-bottom: 1em; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1100px) {
     body header#page-header {
       display: flex;
       justify-content: space-around;
       align-items: center; } }
   body header#page-header section {
     font-family: Lobster, "Cairo", sans-serif;
-    color: #fceed1; }
-    @media screen and (max-width: 1000px) {
+    color: #fceed1;
+    transition: all 0.4s; }
+    @media screen and (max-width: 1100px) {
       body header#page-header section {
         width: 100%; } }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1100px) {
       body header#page-header section {
         width: 30%; } }
     body header#page-header section h1 {
@@ -59,11 +96,15 @@ body header#page-header {
     body header#page-header nav .menu-item {
       color: #c80e13;
       padding: 0.5em;
-      border-radius: 100px; }
+      border-radius: 100px;
+      transition: all 0.4s; }
       body header#page-header nav .menu-item a {
         color: #c80e13; }
+        body header#page-header nav .menu-item a:hover {
+          text-decoration: none; }
       body header#page-header nav .menu-item:hover {
-        background-color: #fae2af; }
+        background-color: #fae2af;
+        cursor: pointer; }
     body header#page-header nav .dropdown .dropdown-content {
       padding-top: 1em;
       display: none;
@@ -74,80 +115,53 @@ body header#page-header {
       z-index: 1; }
       body header#page-header nav .dropdown .dropdown-content a {
         display: block;
-        padding: 0.5em; }
+        padding: 0.5em;
+        transition: all 0.4s; }
         body header#page-header nav .dropdown .dropdown-content a:hover {
           background-color: #fae2af; }
     body header#page-header nav .dropdown:hover .dropdown-content {
       display: block; }
 
-@media screen and (min-width: 1000px) {
-  :root {
-    font-size: 18px; } }
-
-@media screen and (min-width: 700px) and (max-width: 1000px) {
-  :root {
-    font-size: 16px; } }
-
-@media screen and (min-width: 400px) and (max-width: 700px) {
-  :root {
-    font-size: 15px; } }
-
-@media screen and (min-width: 250px) and (max-width: 400px) {
-  :root {
-    font-size: 14px; } }
-
-@media screen and (min-width: 150px) and (max-width: 250px) {
-  :root {
-    font-size: 13px; } }
-
-@media screen and (max-width: 150px) {
-  :root {
-    font-size: 11px; } }
-
-body {
-  text-align: center;
-  font-family: "Cairo", sans-serif;
-  margin: 0;
-  background-color: #fceed1;
-  color: #69070a;
-  min-height: 100vh; }
-  body main section.content {
-    padding: 2em; }
-    body main section.content header {
-      background-color: white;
-      border-radius: 24px;
-      padding: 1em; }
-      body main section.content header div.data {
-        display: flex;
+body main section.content {
+  padding: 2em; }
+  body main section.content header {
+    background-color: white;
+    border-radius: 24px;
+    padding: 1em; }
+    body main section.content header div.data {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      body main section.content header div.data div {
+        width: 20%;
+        margin-top: 2em; }
+        body main section.content header div.data div p {
+          font-size: 2rem; }
+      @media screen and (max-width: 700px) {
+        body main section.content header div.data {
+          display: block; }
+          body main section.content header div.data div {
+            width: 100%; } }
+    body main section.content header footer {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.12rem; }
+      body main section.content header footer div.social-btns {
+        width: 100px;
         justify-content: space-around;
-        align-items: center; }
-        body main section.content header div.data div {
-          width: 20%;
-          margin-top: 2em; }
-          body main section.content header div.data div p {
-            font-size: 2rem; }
-        @media screen and (max-width: 700px) {
-          body main section.content header div.data {
-            display: block; }
-            body main section.content header div.data div {
-              width: 100%; } }
-      body main section.content header footer {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1.12rem; }
-        body main section.content header footer div.social-btns {
-          width: 100px;
-          justify-content: space-around;
-          display: flex; }
-          body main section.content header footer div.social-btns > div {
-            cursor: pointer; }
-        @media screen and (max-width: 700px) {
-          body main section.content header footer {
-            display: block; }
-            body main section.content header footer div.social-btns {
-              margin: 0 auto;
-              font-size: 1.5rem;
-              width: 200px; } }
+        display: flex; }
+        body main section.content header footer div.social-btns > div {
+          cursor: pointer;
+          transition: all 0.7s; }
+          body main section.content header footer div.social-btns > div:hover {
+            transform: scale(1.07); }
+      @media screen and (max-width: 700px) {
+        body main section.content header footer {
+          display: block; }
+          body main section.content header footer div.social-btns {
+            margin: 0 auto;
+            font-size: 1.5rem;
+            width: 200px; } }
     @media screen and (max-width: 700px) and (max-width: 500px) {
       body main section.content header footer div.social-btns {
         width: 100%;
