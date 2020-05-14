@@ -182,7 +182,8 @@ body main {
         display: flex;
         flex-wrap: wrap; }
         body main section header.quiz #quiz-content #quiz-thumbnail {
-          width: 50%; }
+          width: 50%;
+          max-height: 100%; }
         body main section header.quiz #quiz-content #button-area {
           width: 50%;
           display: flex;
