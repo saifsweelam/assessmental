@@ -31,7 +31,8 @@ body {
   font-family: "Cairo", sans-serif;
   margin: 0;
   background-color: #fceed1;
-  color: #69070a; }
+  color: #69070a;
+  min-height: 100vh; }
 
 input, textarea, button {
   color: #69070a; }
